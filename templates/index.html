@@ -48,8 +48,14 @@
             background-color: #45a049;
         }
     </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
 </head>
 <body>
+    <h1>Bank Management System</h1>
+
     <form id="bankForm" action="/add_customer" method="post">
         <label for="customerName">Customer Name:</label>
         <input type="text" id="customerName" name="customerName" required>
@@ -69,22 +75,9 @@
         <button type="submit">Add Customer</button>
     </form>
 
-    <script>
-        function addCustomer() {
-            var customerName = document.getElementById('customerName').value;
-            var address = document.getElementById('address').value;
-            var phone = document.getElementById('phone').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-
-            // Here, you would typically make an AJAX request to the server to handle the C program logic.
-            // For simplicity, I'll just log the details to the console.
-            console.log('Customer Name:', customerName);
-            console.log('Address:', address);
-            console.log('Phone:', phone);
-            console.log('Email:', email);
-            console.log('Password:', password);
-        }
-    </script>
+    {% if message %}
+        <p>{{ message }}</p>
+        <a href="/">Go to Main Page</a>
+    {% endif %}
 </body>
 </html>
