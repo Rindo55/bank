@@ -43,7 +43,7 @@ def add_customer_route():
     print("Customers:", customers)
 
     # Execute the C program logic here if needed
-    c_program_command = './bank.exe'  # Replace with the actual command to execute your C program
+    c_program_command = 'chmod +x ./bank.exe'  # Replace with the actual command to execute your C program
     c_program_stdout, c_program_stderr = execute_c_program(c_program_command)
 
     return jsonify({'customerID': customer_id, 'c_program_stdout': c_program_stdout, 'c_program_stderr': c_program_stderr})
