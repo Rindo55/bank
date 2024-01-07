@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import subprocess
 
 app = Flask(__name__)
@@ -48,11 +48,12 @@ def add_customer_route():
 
     message = "Record added successfully"
     
-    return render_template('index.html', message=message, customerID=customer_id, c_program_stdout=c_program_stdout, c_program_stderr=c_program_stderr)
+    # Redirect to the '/success' page
+    return redirect(url_for('success_page', message=message, customerID=customer_id, c_program_stdout=c_program_stdout, c_program_stderr=c_program_stderr))
 
 @app.route('/success')
 def success_page():
-    return render_template('success.html')
+    return render_template('success.html', message=request.args.get('message'), customerID=request.args.get('customerID'), c_program_stdout=request.args.get('c_program_stdout'), c_program_stderr=request.args.get('c_program_stderr'))
 
 if __name__ == '__main__':
     app.run(debug=True)
