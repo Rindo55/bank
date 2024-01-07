@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 import subprocess
 
 app = Flask(__name__)
@@ -49,5 +49,10 @@ def add_customer_route():
     message = "Record added successfully"
     
     return render_template('index.html', message=message, customerID=customer_id, c_program_stdout=c_program_stdout, c_program_stderr=c_program_stderr)
+
+@app.route('/success')
+def success_page():
+    return render_template('success.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
