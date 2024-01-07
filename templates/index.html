@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    <form id="bankForm">
+    <form id="bankForm" action="/add_customer" method="post">
         <label for="customerName">Customer Name:</label>
         <input type="text" id="customerName" name="customerName" required>
 
@@ -66,7 +66,7 @@
         <label for="password">Set Password:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="button" onclick="addCustomer()">Add Customer</button>
+        <button type="submit">Add Customer</button>
     </form>
 
     <script>
