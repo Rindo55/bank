@@ -38,12 +38,16 @@ def index():
 def add_customer_route():
     data = request.form
     customer_id = add_customer(data['customerName'], data['address'], data['phone'], data['email'], data['password'])
-    
+
+    # Print the contents of the 'customers' list for debugging
+    print("Customers:", customers)
+
     # Execute the C program logic here if needed
-    c_program_command = 'chmod +x bank.exe ./bank.exe'  # Replace with the actual command to execute your C program
+    c_program_command = './bank.exe'  # Replace with the actual command to execute your C program
     c_program_stdout, c_program_stderr = execute_c_program(c_program_command)
 
     return jsonify({'customerID': customer_id, 'c_program_stdout': c_program_stdout, 'c_program_stderr': c_program_stderr})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
