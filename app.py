@@ -46,8 +46,8 @@ def add_customer_route():
     c_program_command = 'chmod +x ./bank.exe'  # Replace with the actual command to execute your C program
     c_program_stdout, c_program_stderr = execute_c_program(c_program_command)
 
-    return jsonify({'customerID': customer_id, 'c_program_stdout': c_program_stdout, 'c_program_stderr': c_program_stderr})
-
-
+    message = "Record added successfully"
+    
+    return render_template('index.html', message=message, customerID=customer_id, c_program_stdout=c_program_stdout, c_program_stderr=c_program_stderr)
 if __name__ == '__main__':
     app.run(debug=True)
