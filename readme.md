@@ -1,10 +1,24 @@
-### How to deploy?
+# Bank Management System
 
-First, must install flask on terminal using the command `pip3 install flask`
-then 
-```
-git clone https://github.com/AkshayMinesh/bank
-cd bank
-python3 -m app
-```
-**Done, Hopefully it's working now.**
+Bank Management System is a simple web application built with Flask for managing customer records and executing banking transactions. The system includes a web interface for adding customers, opening accounts, and processing transactions.
+
+## Features
+
+- **Add Customer:** Add new customers with details such as name, address, phone number, email, and password.
+
+- **Open Account:** Open a new account for an existing customer with an account number, customer ID, and initial balance.
+
+- **Process Transactions:** Perform deposit and withdrawal transactions on existing accounts.
+
+## Technologies Used
+
+- Flask: A lightweight web framework for Python.
+- HTML/CSS: Front-end for the web interface.
+- C: Backend logic for banking transactions.
+
+## Getting Started
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/bank-management-system.git
+   cd bank-management-system
