@@ -21,7 +21,7 @@ Bank Management System is a simple web application built with Flask for managing
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/AkshayMinesh/bank
-   cd bank-management-system
+   cd bank
 2. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
