@@ -1,4 +1,4 @@
-##How to deploy?
+### How to deploy?
 
 First, must install flask on terminal using the command `pip3 install flask`
 then 
