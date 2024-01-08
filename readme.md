@@ -30,3 +30,8 @@ Bank Management System is a simple web application built with Flask for managing
    python app.py (or) python3 -m app
    
 The application will be accessible at http://localhost:5000/
+
+## TO DO
+- Add encryption/decryption for passwords
+- Improvements in front end
+- a lot more....
